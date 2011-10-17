@@ -1,0 +1,54 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Thread</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Thread</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass133753"></a>
+<p>Declaration :</p><ul><li>C++ : class Thread </li></ul><p>Directly inherited by : <a href="class133625.html#refclass133625"><b>LocalAgent</b></a> </p>
+<p>Artifact : <a href="index.html#refartifact130681"><b>Thread</b></a></p><div class="sub">
+<a name="refattribute137849"></a>
+<table><tr><td><div class="element">Attribut <b>threadMutex</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # threadMutex : pthread_mutex_t</li><li>C++ : protected: pthread_mutex_t threadMutex</li></ul><a name="refattribute137977"></a>
+<table><tr><td><div class="element">Attribut <b>isSleeping</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # isSleeping : bool</li><li>C++ : protected: bool isSleeping</li></ul><a name="refattribute138105"></a>
+<table><tr><td><div class="element">Attribut <b>threadFlagMutex</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # threadFlagMutex : pthread_mutex_t</li><li>C++ : protected: pthread_mutex_t threadFlagMutex</li></ul><a name="refattribute138233"></a>
+<table><tr><td><div class="element">Attribut <b>threadFlagConditionVariable</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # threadFlagConditionVariable : pthread_cond_t</li><li>C++ : protected: pthread_cond_t threadFlagConditionVariable</li></ul><a name="refattribute138361"></a>
+<table><tr><td><div class="element">Attribut <b>isWaiting</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # isWaiting : bool</li><li>C++ : protected: bool isWaiting</li></ul><a name="refattribute138489"></a>
+<table><tr><td><div class="element">Attribut <b>threadFlagMutexLockUntilSignal</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # threadFlagMutexLockUntilSignal : pthread_mutex_t</li><li>C++ : protected: pthread_mutex_t threadFlagMutexLockUntilSignal</li></ul><a name="refattribute138617"></a>
+<table><tr><td><div class="element">Attribut <b>threadFlagCVLockUntilSignal</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # threadFlagCVLockUntilSignal : pthread_cond_t</li><li>C++ : protected: pthread_cond_t threadFlagCVLockUntilSignal</li></ul><a name="refattribute138745"></a>
+<table><tr><td><div class="element">Attribut <b>tattr</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : # tattr : pthread_attr_t</li><li>C++ : protected: pthread_attr_t tattr</li></ul><a name="refoperation157049"></a>
+<table><tr><td><div class="element">Operation <b>run</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : abstract, # run() : void</li><li>C++ : protected: virtual void run()= 0 </li></ul><a name="refattribute138873"></a>
+<table><tr><td><div class="element">Attribut <b>threadId_</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - threadId_ : pthread_t</li><li>C++ : private: pthread_t threadId_</li></ul><a name="refoperation157177"></a>
+<table><tr><td><div class="element">Operation <b>function</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, - function(inout ptr : void) : void</li><li>C++ : private: static void * function(void * ptr)</li></ul><a name="refoperation157305"></a>
+<table><tr><td><div class="element">Operation <b>Thread</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Thread() : </li><li>C++ : public: Thread()</li></ul><a name="refoperation157433"></a>
+<table><tr><td><div class="element">Operation <b>~Thread</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + ~Thread() : </li><li>C++ : public: virtual ~Thread()</li></ul><a name="refoperation157561"></a>
+<table><tr><td><div class="element">Operation <b>start</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + start() : void</li><li>C++ : public: virtual void start()</li></ul><a name="refoperation157689"></a>
+<table><tr><td><div class="element">Operation <b>sleep</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + sleep(in seconds : long) : bool</li><li>C++ : public: bool sleep(long seconds)</li></ul><a name="refoperation157817"></a>
+<table><tr><td><div class="element">Operation <b>usleep</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + usleep(in milliseconds : long) : bool</li><li>C++ : public: bool usleep(long milliseconds)</li></ul><a name="refoperation157945"></a>
+<table><tr><td><div class="element">Operation <b>wakeUp</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + wakeUp() : void</li><li>C++ : public: void wakeUp()</li></ul><a name="refoperation158073"></a>
+<table><tr><td><div class="element">Operation <b>lock</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + lock() : void</li><li>C++ : public: void lock()</li></ul><a name="refoperation158201"></a>
+<table><tr><td><div class="element">Operation <b>unlock</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + unlock() : void</li><li>C++ : public: void unlock()</li></ul><a name="refoperation158329"></a>
+<table><tr><td><div class="element">Operation <b>waitForUnlockCondition</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + waitForUnlockCondition() : void</li><li>C++ : public: void waitForUnlockCondition()</li></ul><a name="refoperation158457"></a>
+<table><tr><td><div class="element">Operation <b>unlockConditionSatisfied</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + unlockConditionSatisfied() : bool</li><li>C++ : public: bool unlockConditionSatisfied()</li></ul></div>
+<p>All public operations : <a href="class133753.html#refoperation158073"><b>lock</b></a> , <a href="class133753.html#refoperation157689"><b>sleep</b></a> , <a href="class133753.html#refoperation157561"><b>start</b></a> , <a href="class133753.html#refoperation158201"><b>unlock</b></a> , <a href="class133753.html#refoperation158457"><b>unlockConditionSatisfied</b></a> , <a href="class133753.html#refoperation157817"><b>usleep</b></a> , <a href="class133753.html#refoperation158329"><b>waitForUnlockCondition</b></a> , <a href="class133753.html#refoperation157945"><b>wakeUp</b></a> </p>
+</body>
+</html>

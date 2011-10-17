@@ -1,0 +1,7 @@
+1) Escolher um dos tipos de documentação disponível: DOXYGEN ou BOUML.
+
+2) Abrir a pasta com a documentação escolhida.
+
+3) Abrir o arquivo index.html presente na pasta.
+
+4) Navegar pela documentação.

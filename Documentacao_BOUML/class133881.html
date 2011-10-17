@@ -1,0 +1,48 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Media</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Media</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass133881"></a>
+<p>Declaration :</p><ul><li>C++ : class Media </li></ul><p>Artifact : <a href="index.html#refartifact129913"><b>Media</b></a></p><div class="sub">
+<a name="refattribute132729"></a>
+<table><tr><td><div class="element">Attribut <b>idMedia</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : static, - idMedia : int</li><li>C++ : private: static int idMedia</li></ul><a name="refattribute132857"></a>
+<table><tr><td><div class="element">Attribut <b>id</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - id : string</li><li>C++ : private: string id</li></ul><a name="refattribute132985"></a>
+<table><tr><td><div class="element">Attribut <b>status</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - status : string</li><li>C++ : private: string status</li></ul><a name="refattribute133113"></a>
+<table><tr><td><div class="element">Attribut <b>time</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - time : string</li><li>C++ : private: string time</li></ul><a name="refrelation133369"></a>
+<table><tr><td><div class="element">Relation <b>context (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - context : <a href="class132729.html#refclass132729"><b>Context</b></a></li><li>C++ : private: <a href="class132729.html#refclass132729"><b>Context</b></a> * context</li></ul><a name="refrelation133497"></a>
+<table><tr><td><div class="element">Relation <b>document (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - document : <a href="class132857.html#refclass132857"><b>Document</b></a></li><li>C++ : private: <a href="class132857.html#refclass132857"><b>Document</b></a> * document</li></ul><a name="refoperation143609"></a>
+<table><tr><td><div class="element">Operation <b>Media</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Media(in id : string, in status : string, in time : string, inout context : <a href="class132729.html#refclass132729"><b>Context</b></a>, inout document : <a href="class132857.html#refclass132857"><b>Document</b></a>) : </li><li>C++ : public: Media(string id, string status, string time, <a href="class132729.html#refclass132729"><b>Context</b></a> * context, <a href="class132857.html#refclass132857"><b>Document</b></a> * document)</li></ul><a name="refoperation143737"></a>
+<table><tr><td><div class="element">Operation <b>generateSql</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + generateSql() : string</li><li>C++ : public: string generateSql()</li></ul><a name="refoperation143865"></a>
+<table><tr><td><div class="element">Operation <b>getIdMedia</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getIdMedia() : int</li><li>C++ : public: int getIdMedia()</li></ul><a name="refoperation143993"></a>
+<table><tr><td><div class="element">Operation <b>setIdMedia</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + setIdMedia(in id : int) : void</li><li>C++ : public: static void setIdMedia(int id)</li></ul><a name="refoperation144121"></a>
+<table><tr><td><div class="element">Operation <b>incIdMedia</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + incIdMedia() : void</li><li>C++ : public: static void incIdMedia()</li></ul><a name="refoperation144249"></a>
+<table><tr><td><div class="element">Operation <b>getId</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getId() : string</li><li>C++ : public: string getId()</li></ul><a name="refoperation144377"></a>
+<table><tr><td><div class="element">Operation <b>setId</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setId(in id : string) : void</li><li>C++ : public: void setId(string id)</li></ul><a name="refoperation144505"></a>
+<table><tr><td><div class="element">Operation <b>getStatus</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getStatus() : string</li><li>C++ : public: string getStatus()</li></ul><a name="refoperation144633"></a>
+<table><tr><td><div class="element">Operation <b>setStatus</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setStatus(in status : string) : void</li><li>C++ : public: void setStatus(string status)</li></ul><a name="refoperation144761"></a>
+<table><tr><td><div class="element">Operation <b>getTime</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getTime() : string</li><li>C++ : public: string getTime()</li></ul><a name="refoperation144889"></a>
+<table><tr><td><div class="element">Operation <b>setTime</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setTime(in time : string) : void</li><li>C++ : public: void setTime(string time)</li></ul><a name="refoperation145017"></a>
+<table><tr><td><div class="element">Operation <b>getContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getContext() : <a href="class132729.html#refclass132729"><b>Context</b></a></li><li>C++ : public: <a href="class132729.html#refclass132729"><b>Context</b></a> * getContext()</li></ul><a name="refoperation145145"></a>
+<table><tr><td><div class="element">Operation <b>setContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setContext(inout context : <a href="class132729.html#refclass132729"><b>Context</b></a>) : void</li><li>C++ : public: void setContext(<a href="class132729.html#refclass132729"><b>Context</b></a> * context)</li></ul><a name="refoperation145273"></a>
+<table><tr><td><div class="element">Operation <b>getDocument</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getDocument() : <a href="class132857.html#refclass132857"><b>Document</b></a></li><li>C++ : public: <a href="class132857.html#refclass132857"><b>Document</b></a> * getDocument()</li></ul><a name="refoperation145401"></a>
+<table><tr><td><div class="element">Operation <b>setDocument</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setDocument(inout document : <a href="class132857.html#refclass132857"><b>Document</b></a>) : void</li><li>C++ : public: void setDocument(<a href="class132857.html#refclass132857"><b>Document</b></a> * document)</li></ul></div>
+<p>All public operations : <a href="class133881.html#refoperation143737"><b>generateSql</b></a> , <a href="class133881.html#refoperation145017"><b>getContext</b></a> , <a href="class133881.html#refoperation145273"><b>getDocument</b></a> , <a href="class133881.html#refoperation144249"><b>getId</b></a> , <a href="class133881.html#refoperation143865"><b>getIdMedia</b></a> , <a href="class133881.html#refoperation144505"><b>getStatus</b></a> , <a href="class133881.html#refoperation144761"><b>getTime</b></a> , <a href="class133881.html#refoperation144121"><b>incIdMedia</b></a> , <a href="class133881.html#refoperation145145"><b>setContext</b></a> , <a href="class133881.html#refoperation145401"><b>setDocument</b></a> , <a href="class133881.html#refoperation144377"><b>setId</b></a> , <a href="class133881.html#refoperation143993"><b>setIdMedia</b></a> , <a href="class133881.html#refoperation144633"><b>setStatus</b></a> , <a href="class133881.html#refoperation144889"><b>setTime</b></a> </p>
+</body>
+</html>

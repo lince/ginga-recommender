@@ -1,0 +1,141 @@
+#ifndef _IMININGALGORITHMAPRIORI_H_
+#define _IMININGALGORITHMAPRIORI_H_
+
+#include <vector>
+#include <string>
+#include <map>
+#include <fstream>
+
+#include <ginga/recommender/database/Database.h>
+#include <ginga/recommender/utils/Utils.h>
+#include <ginga/recommender/miningalgorithm/MiningAlgorithm.h>
+#include <ginga/recommender/miningalgorithm/Apriori_Trie.hpp>
+#include <ginga/recommender/miningalgorithm/Apriori.hpp>
+#include <ginga/recommender/miningalgorithm/common.hpp>
+#include <ginga/recommender/miningalgorithm/Input_Output_Manager.hpp>
+#include <ginga/recommender/miningalgorithm/Trie.hpp>
+#include <ginga/recommender/>
+
+using namespace std;
+
+namespace br {
+    namespace ufscar {
+        namespace lince {
+            namespace ginga {
+                namespace recommender {
+
+                    class IMiningAlgorithmApriori : public MiningAlgorithm {
+                    public:
+
+                        ///define o tipo itemtype utilizado pelo algoritmo apriori para contagem dos elementos
+                        typedef unsigned long itemtype;
+
+                        /**
+                         * Construtor.
+                         */
+                        IMiningAlgorithmApriori();
+
+                        /**
+                         * Inicializa o algoritmo com os parâmetros especificados.
+                         * @param params parâmetros para o algoritmo:
+                         *        params[0]: arquivo que contém as interações do usuário (comportamento do usuário)
+                         *        params[1]: min_sup parametros do algoritmo. Utilizado para desconsiderar poucas interações do usuário.
+                         *        params[2]: min_confi Confiabilidade dos dados. Quanto maior esse parâmetro, menos regras são produzidas.
+                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.
+                         */
+                        bool setParams(vector<char*> params);
+
+                        /**
+                         * Prepara os dados para serem processados pelo algoritmo.
+                         * @param data nome do arquivo com os dados a serem pre-processados.
+                         * @param delimiter delimitador dos dados.
+                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.
+                         */
+                        bool prepare(const char* data, const char* delimiter);
+
+                        /**
+                         * Prepara os dados para serem processados pelo algoritmo.
+                         * @param db banco de dados que contém a tabela a ser pre-processada.
+                         * @param table tabela com os dados a serem pre-processados.
+                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.
+                         */
+                        bool prepare(Database* db, const char* table);
+
+                        /**
+                         * Executa o algoritmo.
+                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.
+                         */
+                        bool start();
+
+                        /**
+                         * Pára a execução do algoritmo.
+                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.
+                         */
+                        bool stop();
+
+                        /**
+                         * Define a saída dos dados processados.
+                         * @param data variável para armazenamento dos dados processados.
+                         * @param size tamanho (em bytes) da variável para armazenamento dos dados.
+                         * @param delimiter delimitador dos dados.
+                         */
+                        void setOutput(const char* data, long size, const char* delimiter);
+
+                        /**
+                         * Define a saída dos dados processados.
+                         * @param db banco de dados que contém a tabela onde serão armazenados os dados processados.
+                         * @param table tabela onde serão armazenados os dados processados.
+                         */
+                        void setOutput(Database* db, const char* table);
+
+                        /**
+                         * Define a saída dos dados processados.
+                         * @param file caminho do arquivo para armazenamento dos dados processados.
+                         */
+                        void setOutput(const char* file);
+
+
+                    private:
+                        //void code_file_process_out_Algorithm(char* outAlgorithm);
+                        //void code_file_process_out(char* outAlgorithm);
+                        void write_decoded_item(itemtype item);
+                        void decode();
+
+
+                        vector<char*>* params;
+                        string inData;
+                        string inDelimiter;
+                        Database* inDB;
+                        string inTable;
+                        string outData;
+                        long outSize;
+                        string outDelimiter;
+                        Database* outDB;
+                        string outTable;
+                        string outFile;
+                        string inFile;
+                        double minSup;
+                        double minConfi;
+
+                        ///abstração para o arquivo que contém os dados da interação do usuário
+                        FILE *code_file_algorithm;
+                        /**
+                         * abstração para o arquivo de saída produzido pelo algoritmo apriori. O arquivo de saída ainda não está
+                         * pronto, necessitando ser submetido aos algoritmos do módulo FilterAgent
+                         * @see br.ufscar.lince.ginga.recommender.filteragent
+                         */
+                        ofstream code_file_out;
+
+                        ///conta a quantidade de itens (programas) de acordo com a base de dados do usuário
+                        map<itemtype, string> codearray;
+                        string imprimir;
+                    };
+
+                }
+            }
+        }
+    }
+}
+
+#endif
+

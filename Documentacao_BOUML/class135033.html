@@ -1,0 +1,44 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class SystemResource</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class SystemResource</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass135033"></a>
+<p>Declaration :</p><ul><li>C++ : class SystemResource </li></ul><p>Artifact : <a href="index.html#refartifact131577"><b>SystemResource</b></a></p><div class="sub">
+<a name="refoperation165881"></a>
+<table><tr><td><div class="element">Operation <b>getCPUClock</b></div></td></tr></table><p>*<br />                         * Retorna a frequência da CPU.<br />                         * @return frequência da CPU em Hz.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getCPUClock() : long</li><li>C++ : public: long getCPUClock()</li></ul><a name="refoperation166009"></a>
+<table><tr><td><div class="element">Operation <b>getCPUCount</b></div></td></tr></table><p>*<br />                         * Retorna quantidade de CPUs da máquina.<br />                         * @return quantidade de CPUs da máquina.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getCPUCount() : int</li><li>C++ : public: int getCPUCount()</li></ul><a name="refoperation166137"></a>
+<table><tr><td><div class="element">Operation <b>getMemorySize</b></div></td></tr></table><p>*<br />                         * Retorna a quantidade total de memória da máquina.<br />                         * @return total de memória em bytes.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getMemorySize() : long</li><li>C++ : public: long getMemorySize()</li></ul><a name="refoperation166265"></a>
+<table><tr><td><div class="element">Operation <b>getMemoryFree</b></div></td></tr></table><p>*<br />                         * Retorna a quantidade de memória livre na máquina.<br />                         * @return total de memória livre (em bytes).<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getMemoryFree() : long</li><li>C++ : public: long getMemoryFree()</li></ul><a name="refoperation166393"></a>
+<table><tr><td><div class="element">Operation <b>getDiskSize</b></div></td></tr></table><p>*<br />                         * Retorna a quantidade total de espaço de armazenamento da máquina.<br />                         * @return total de espaço de armazenamento da máquina (em bytes).<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getDiskSize() : off_t</li><li>C++ : public: off_t getDiskSize()</li></ul><a name="refoperation166521"></a>
+<table><tr><td><div class="element">Operation <b>getDiskFree</b></div></td></tr></table><p>*<br />                         * Retorna a quantidade de espaço de armazenamento livre da máquina.<br />                         * @return espaço de armazenamento livre da máquina (em bytes).<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getDiskFree() : off_t</li><li>C++ : public: off_t getDiskFree()</li></ul><a name="refoperation166649"></a>
+<table><tr><td><div class="element">Operation <b>reserve</b></div></td></tr></table><p>*<br />                         * Reserva um recurso do sistema para uma aplicação.<br />                         * @param applicationId identificação da aplicação que solicita o recurso.<br />                         * @param resource identificação do recurso solicitado: 1 - CPU<br /></p><p>Declaration :</p><ul><li>Uml : + reserve(in applicationId : char, in resource : int, in count : long) : int</li><li>C++ : public: int reserve(const char * applicationId, int resource, long count)</li></ul><a name="refoperation166777"></a>
+<table><tr><td><div class="element">Operation <b>freeReserve</b></div></td></tr></table><p>*<br />                         * Desfaz uma reserva de recurso do sistema.<br />                         * @param applicationId identificação da aplicação que solicitou o recurso.<br />                         * @param reserveId identificador do recurso que será liberado.<br />                         * @return true, se a operação foi executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + freeReserve(in applicationId : char, in reserveId : int) : bool</li><li>C++ : public: bool freeReserve(const char * applicationId, int reserveId)</li></ul><a name="refoperation166905"></a>
+<table><tr><td><div class="element">Operation <b>allocate</b></div></td></tr></table><p>*<br />                         * Faz uso de um recurso do sistema reservado anteriormente.<br />                         * @param applicationId identificação da aplicação que solicitou o recurso.<br />                         * @param reserveId identificador do recurso reservado.<br />                         * @return true, se a operação foi executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + allocate(in applicationId : char, in reserveId : int) : bool</li><li>C++ : public: bool allocate(const char * applicationId, int reserveId)</li></ul><a name="refoperation167033"></a>
+<table><tr><td><div class="element">Operation <b>freeAllocation</b></div></td></tr></table><p>*<br />                         * Libera o uso de um recurso do sistema.<br />                         * @param applicationId identificação da aplicação que solicitou o recurso.<br />                         * @param reserveId identificador do recurso reservado.<br />                         * @return true, se a operação foi executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + freeAllocation(in applicationId : char, in reserveId : int) : bool</li><li>C++ : public: bool freeAllocation(const char * applicationId, int reserveId)</li></ul><a name="refoperation167161"></a>
+<table><tr><td><div class="element">Operation <b>SystemResource</b></div></td></tr></table><p>*<br />                         * Construtor.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + SystemResource() : </li><li>C++ : public: SystemResource()</li></ul><a name="refoperation167289"></a>
+<table><tr><td><div class="element">Operation <b>~SystemResource</b></div></td></tr></table><p>*<br />                         * Destrutor.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + ~SystemResource() : </li><li>C++ : public: ~SystemResource()</li></ul><a name="refoperation167417"></a>
+<table><tr><td><div class="element">Operation <b>initDataMembers</b></div></td></tr></table><p>*<br />                         * Obtém os valores dos atributos da classe relativos à CPU.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : - initDataMembers() : void</li><li>C++ : private: void initDataMembers()</li></ul><a name="refattribute142073"></a>
+<table><tr><td><div class="element">Attribut <b>sn</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - sn : utsname</li><li>C++ : private: struct utsname sn</li></ul><a name="refattribute142201"></a>
+<table><tr><td><div class="element">Attribut <b>info</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - info : sysinfo</li><li>C++ : private: struct sysinfo info</li></ul><a name="refattribute142329"></a>
+<table><tr><td><div class="element">Attribut <b>CPUClock</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - CPUClock : float</li><li>C++ : private: float CPUClock</li></ul><a name="refattribute142457"></a>
+<table><tr><td><div class="element">Attribut <b>CPUCount</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - CPUCount : int</li><li>C++ : private: int CPUCount</li></ul></div>
+<p>All public operations : <a href="class135033.html#refoperation166905"><b>allocate</b></a> , <a href="class135033.html#refoperation167033"><b>freeAllocation</b></a> , <a href="class135033.html#refoperation166777"><b>freeReserve</b></a> , <a href="class135033.html#refoperation165881"><b>getCPUClock</b></a> , <a href="class135033.html#refoperation166009"><b>getCPUCount</b></a> , <a href="class135033.html#refoperation166521"><b>getDiskFree</b></a> , <a href="class135033.html#refoperation166393"><b>getDiskSize</b></a> , <a href="class135033.html#refoperation166265"><b>getMemoryFree</b></a> , <a href="class135033.html#refoperation166137"><b>getMemorySize</b></a> , <a href="class135033.html#refoperation166649"><b>reserve</b></a> </p>
+</body>
+</html>

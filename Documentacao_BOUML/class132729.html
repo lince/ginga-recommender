@@ -1,0 +1,40 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Context</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Context</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass132729"></a>
+<p>Declaration :</p><ul><li>C++ : class Context </li></ul><p>Artifact : <a href="index.html#refartifact129145"><b>Context</b></a></p><div class="sub">
+<a name="refattribute130553"></a>
+<table><tr><td><div class="element">Attribut <b>idContext</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : static, - idContext : int</li><li>C++ : private: static int idContext</li></ul><a name="refattribute130681"></a>
+<table><tr><td><div class="element">Attribut <b>id</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - id : string</li><li>C++ : private: string id</li></ul><a name="refrelation131321"></a>
+<table><tr><td><div class="element">Relation <b>context (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - context : <a href="class132729.html#refclass132729"><b>Context</b></a></li><li>C++ : private: <a href="class132729.html#refclass132729"><b>Context</b></a> * context</li></ul><a name="refrelation131449"></a>
+<table><tr><td><div class="element">Relation <b>document (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - document : <a href="class132857.html#refclass132857"><b>Document</b></a></li><li>C++ : private: <a href="class132857.html#refclass132857"><b>Document</b></a> * document</li></ul><a name="refoperation135417"></a>
+<table><tr><td><div class="element">Operation <b>Context</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Context(in id : string, inout context : <a href="class132729.html#refclass132729"><b>Context</b></a>, inout document : <a href="class132857.html#refclass132857"><b>Document</b></a>) : </li><li>C++ : public: Context(string id, <a href="class132729.html#refclass132729"><b>Context</b></a> * context, <a href="class132857.html#refclass132857"><b>Document</b></a> * document)</li></ul><a name="refoperation135545"></a>
+<table><tr><td><div class="element">Operation <b>generateSql</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + generateSql() : string</li><li>C++ : public: string generateSql()</li></ul><a name="refoperation135673"></a>
+<table><tr><td><div class="element">Operation <b>getIdContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getIdContext() : int</li><li>C++ : public: int getIdContext()</li></ul><a name="refoperation135801"></a>
+<table><tr><td><div class="element">Operation <b>setIdContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + setIdContext(in id : int) : void</li><li>C++ : public: static void setIdContext(int id)</li></ul><a name="refoperation135929"></a>
+<table><tr><td><div class="element">Operation <b>incIdContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + incIdContext() : void</li><li>C++ : public: static void incIdContext()</li></ul><a name="refoperation136057"></a>
+<table><tr><td><div class="element">Operation <b>getId</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getId() : string</li><li>C++ : public: string getId()</li></ul><a name="refoperation136185"></a>
+<table><tr><td><div class="element">Operation <b>setId</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setId(in id : string) : void</li><li>C++ : public: void setId(string id)</li></ul><a name="refoperation136313"></a>
+<table><tr><td><div class="element">Operation <b>getContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getContext() : <a href="class132729.html#refclass132729"><b>Context</b></a></li><li>C++ : public: <a href="class132729.html#refclass132729"><b>Context</b></a> * getContext()</li></ul><a name="refoperation136441"></a>
+<table><tr><td><div class="element">Operation <b>setContext</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setContext(inout context : <a href="class132729.html#refclass132729"><b>Context</b></a>) : void</li><li>C++ : public: void setContext(<a href="class132729.html#refclass132729"><b>Context</b></a> * context)</li></ul><a name="refoperation136569"></a>
+<table><tr><td><div class="element">Operation <b>getDocument</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getDocument() : <a href="class132857.html#refclass132857"><b>Document</b></a></li><li>C++ : public: <a href="class132857.html#refclass132857"><b>Document</b></a> * getDocument()</li></ul><a name="refoperation136697"></a>
+<table><tr><td><div class="element">Operation <b>setDocument</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setDocument(inout document : <a href="class132857.html#refclass132857"><b>Document</b></a>) : void</li><li>C++ : public: void setDocument(<a href="class132857.html#refclass132857"><b>Document</b></a> * document)</li></ul></div>
+<p>All public operations : <a href="class132729.html#refoperation135545"><b>generateSql</b></a> , <a href="class132729.html#refoperation136313"><b>getContext</b></a> , <a href="class132729.html#refoperation136569"><b>getDocument</b></a> , <a href="class132729.html#refoperation136057"><b>getId</b></a> , <a href="class132729.html#refoperation135673"><b>getIdContext</b></a> , <a href="class132729.html#refoperation135929"><b>incIdContext</b></a> , <a href="class132729.html#refoperation136441"><b>setContext</b></a> , <a href="class132729.html#refoperation136697"><b>setDocument</b></a> , <a href="class132729.html#refoperation136185"><b>setId</b></a> , <a href="class132729.html#refoperation135801"><b>setIdContext</b></a> </p>
+</body>
+</html>

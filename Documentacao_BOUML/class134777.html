@@ -1,0 +1,28 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Scheduler</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Scheduler</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass134777"></a>
+<p>Declaration :</p><ul><li>C++ : class Scheduler </li></ul><p>Artifact : <a href="index.html#refartifact131193"><b>Scheduler</b></a></p><div class="sub">
+<a name="refoperation164217"></a>
+<table><tr><td><div class="element">Operation <b>Scheduler</b></div></td></tr></table><p>*<br />                         * Construtor.<br />                         * Devolve uma instância de Scheduler.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + Scheduler() : </li><li>C++ : public: Scheduler()</li></ul><a name="refoperation164345"></a>
+<table><tr><td><div class="element">Operation <b>~Scheduler</b></div></td></tr></table><p>*<br />                         * Destrutor.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + ~Scheduler() : </li><li>C++ : public: ~Scheduler()</li></ul><a name="refoperation164473"></a>
+<table><tr><td><div class="element">Operation <b>schedule</b></div></td></tr></table><p>*<br />                         * Agenda a execução de uma aplicação.<br />                         * @param lib nome da biblioteca que contém a aplicação a ser executada.<br />                         * @param constructor construtor da aplicação que devolve uma instância para a interface SchedulerItem.<br />                         * @param destructor destrutor da aplicação.<br />                         * @param params parâmetros para a aplicação.<br />                         * @param begin data e horário para iniciar a execução da aplicação (formato: dd/MM/aaaa-hh:mm:ss).<br />                         * @param end data e horário para o fim da execução da aplicação (formato: dd/MM/aaaa-hh:mm:ss).<br />                         * @param period periodicidade do agendamento: 1 - uma única vez<br /></p><p>Declaration :</p><ul><li>Uml : + schedule(in lib : char, in constructor : char, in destructor : char, inout params : vector&lt;char*&gt;, in begin : char, in end : char, in period : int) : bool</li><li>C++ : public: bool schedule(const char * lib, const char * constructor, const char * destructor, vector&lt;char*&gt; * params, const char * begin, const char * end, int period)</li></ul><a name="refoperation164601"></a>
+<table><tr><td><div class="element">Operation <b>load</b></div></td></tr></table><p>*<br />                         * Carrega para a memória as informações de agendamentos armazenadas em arquivo.<br />                         * @param file arquivo XML com informações de agendamentos.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + load(in file : char) : bool</li><li>C++ : public: bool load(const char * file)</li></ul><a name="refoperation164729"></a>
+<table><tr><td><div class="element">Operation <b>store</b></div></td></tr></table><p>*<br />                         * Salva em arquivo as informações de agendamentos em memória.<br />                         * @param file arquivo XML para destino das informações de agendamentos.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + store(in file : char) : bool</li><li>C++ : public: bool store(const char * file)</li></ul></div>
+<p>All public operations : <a href="class134777.html#refoperation164601"><b>load</b></a> , <a href="class134777.html#refoperation164473"><b>schedule</b></a> , <a href="class134777.html#refoperation164729"><b>store</b></a> </p>
+</body>
+</html>

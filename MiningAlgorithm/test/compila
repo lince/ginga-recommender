@@ -1,0 +1,1 @@
+g++ main.cpp -o test -I../include -L/usr/local/lib/ginga -L../include/ -L../src/ -L/usr/local/lib -lgingarecommenderdatabase -lpthread -lgingarecommenderminingalgorithm

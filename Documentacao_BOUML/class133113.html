@@ -1,0 +1,47 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Iteraction</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Iteraction</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass133113"></a>
+<p>Declaration :</p><ul><li>C++ : class Iteraction : public <a href="class132601.html#refclass132601"><b>IteractionBase</b></a> </li></ul><p>Artifact : <a href="index.html#refartifact129401"><b>Iteraction</b></a></p><div class="sub">
+<a name="refattribute131065"></a>
+<table><tr><td><div class="element">Attribut <b>idIteraction</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : static, - idIteraction : int</li><li>C++ : private: static int idIteraction</li></ul><a name="refrelation131833"></a>
+<table><tr><td><div class="element">Relation <b>program (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - program : <a href="class133241.html#refclass133241"><b>Program</b></a></li><li>C++ : private: <a href="class133241.html#refclass133241"><b>Program</b></a> * program</li></ul><a name="refrelation131961"></a>
+<table><tr><td><div class="element">Relation <b>volume (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - volume : <a href="class133369.html#refclass133369"><b>Volume</b></a></li><li>C++ : private: <a href="class133369.html#refclass133369"><b>Volume</b></a> * volume</li></ul><a name="refrelation132089"></a>
+<table><tr><td><div class="element">Relation <b>key (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - key : <a href="class133497.html#refclass133497"><b>Key</b></a></li><li>C++ : private: <a href="class133497.html#refclass133497"><b>Key</b></a> * key</li></ul><a name="refattribute131193"></a>
+<table><tr><td><div class="element">Attribut <b>time</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - time : string</li><li>C++ : private: string time</li></ul><a name="refattribute131321"></a>
+<table><tr><td><div class="element">Attribut <b>type</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - type : string</li><li>C++ : private: string type</li></ul><a name="refoperation137977"></a>
+<table><tr><td><div class="element">Operation <b>Iteraction</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + Iteraction(inout program : <a href="class133241.html#refclass133241"><b>Program</b></a>, inout volume : <a href="class133369.html#refclass133369"><b>Volume</b></a>, inout key : <a href="class133497.html#refclass133497"><b>Key</b></a>, in time : string, in type : string) : </li><li>C++ : public: Iteraction(<a href="class133241.html#refclass133241"><b>Program</b></a> * program, <a href="class133369.html#refclass133369"><b>Volume</b></a> * volume, <a href="class133497.html#refclass133497"><b>Key</b></a> * key, string time, string type)</li></ul><a name="refoperation138105"></a>
+<table><tr><td><div class="element">Operation <b>generateSql</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + generateSql() : string</li><li>C++ : public: string generateSql()</li></ul><a name="refoperation138233"></a>
+<table><tr><td><div class="element">Operation <b>getIdIteraction</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getIdIteraction() : int</li><li>C++ : public: int getIdIteraction()</li></ul><a name="refoperation138361"></a>
+<table><tr><td><div class="element">Operation <b>setIdIteraction</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + setIdIteraction(in id : int) : void</li><li>C++ : public: static void setIdIteraction(int id)</li></ul><a name="refoperation138489"></a>
+<table><tr><td><div class="element">Operation <b>incIdIteraction</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : static, + incIdIteraction() : void</li><li>C++ : public: static void incIdIteraction()</li></ul><a name="refoperation138617"></a>
+<table><tr><td><div class="element">Operation <b>getProgram</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getProgram() : <a href="class133241.html#refclass133241"><b>Program</b></a></li><li>C++ : public: <a href="class133241.html#refclass133241"><b>Program</b></a> * getProgram()</li></ul><a name="refoperation138745"></a>
+<table><tr><td><div class="element">Operation <b>setProgram</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setProgram(inout program : <a href="class133241.html#refclass133241"><b>Program</b></a>) : void</li><li>C++ : public: void setProgram(<a href="class133241.html#refclass133241"><b>Program</b></a> * program)</li></ul><a name="refoperation138873"></a>
+<table><tr><td><div class="element">Operation <b>getVolume</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getVolume() : <a href="class133369.html#refclass133369"><b>Volume</b></a></li><li>C++ : public: <a href="class133369.html#refclass133369"><b>Volume</b></a> * getVolume()</li></ul><a name="refoperation139001"></a>
+<table><tr><td><div class="element">Operation <b>setVolume</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setVolume(inout volume : <a href="class133369.html#refclass133369"><b>Volume</b></a>) : void</li><li>C++ : public: void setVolume(<a href="class133369.html#refclass133369"><b>Volume</b></a> * volume)</li></ul><a name="refoperation139129"></a>
+<table><tr><td><div class="element">Operation <b>getKey</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getKey() : <a href="class133497.html#refclass133497"><b>Key</b></a></li><li>C++ : public: <a href="class133497.html#refclass133497"><b>Key</b></a> * getKey()</li></ul><a name="refoperation139257"></a>
+<table><tr><td><div class="element">Operation <b>setKey</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setKey(inout key : <a href="class133497.html#refclass133497"><b>Key</b></a>) : void</li><li>C++ : public: void setKey(<a href="class133497.html#refclass133497"><b>Key</b></a> * key)</li></ul><a name="refoperation139385"></a>
+<table><tr><td><div class="element">Operation <b>getTime</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getTime() : string</li><li>C++ : public: string getTime()</li></ul><a name="refoperation139513"></a>
+<table><tr><td><div class="element">Operation <b>setTime</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setTime(in time : string) : void</li><li>C++ : public: void setTime(string time)</li></ul><a name="refoperation139641"></a>
+<table><tr><td><div class="element">Operation <b>getType</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getType() : string</li><li>C++ : public: string getType()</li></ul><a name="refoperation139769"></a>
+<table><tr><td><div class="element">Operation <b>setType</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setType(in type : string) : void</li><li>C++ : public: void setType(string type)</li></ul></div>
+<p>All public operations : <a href="class133113.html#refoperation138105"><b>generateSql</b></a> , <a href="class133113.html#refoperation138233"><b>getIdIteraction</b></a> , <a href="class133113.html#refoperation139129"><b>getKey</b></a> , <a href="class133113.html#refoperation138617"><b>getProgram</b></a> , <a href="class133113.html#refoperation139385"><b>getTime</b></a> , <a href="class133113.html#refoperation139641"><b>getType</b></a> , <a href="class133113.html#refoperation138873"><b>getVolume</b></a> , <a href="class133113.html#refoperation138489"><b>incIdIteraction</b></a> , <a href="class133113.html#refoperation138361"><b>setIdIteraction</b></a> , <a href="class133113.html#refoperation139257"><b>setKey</b></a> , <a href="class133113.html#refoperation138745"><b>setProgram</b></a> , <a href="class133113.html#refoperation139513"><b>setTime</b></a> , <a href="class133113.html#refoperation139769"><b>setType</b></a> , <a href="class133113.html#refoperation139001"><b>setVolume</b></a> </p>
+</body>
+</html>

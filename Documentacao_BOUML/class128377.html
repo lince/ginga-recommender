@@ -1,0 +1,44 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Database</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Database</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass128377"></a>
+<p>Declaration :</p><ul><li>C++ : class Database </li></ul><p>Artifact : <a href="index.html#refartifact128377"><b>Database</b></a></p><div class="sub">
+<a name="refattribute128121"></a>
+<table><tr><td><div class="element">Attribut <b>user</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - user : string</li><li>C++ : private: string user</li></ul><a name="refattribute128249"></a>
+<table><tr><td><div class="element">Attribut <b>password</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - password : string</li><li>C++ : private: string password</li></ul><a name="refattribute128377"></a>
+<table><tr><td><div class="element">Attribut <b>database</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - database : string</li><li>C++ : private: string database</li></ul><a name="refattribute128505"></a>
+<table><tr><td><div class="element">Attribut <b>maxSize</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - maxSize : long</li><li>C++ : private: long maxSize</li></ul><a name="refrelation128249"></a>
+<table><tr><td><div class="element">Relation <b>db (&lt;unidirectional association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - db : <a href="class128505.html#refclass128505"><b>sqlite3</b></a></li><li>C++ : private: <a href="class128505.html#refclass128505"><b>sqlite3</b></a> * db</li></ul><a name="refattribute128633"></a>
+<table><tr><td><div class="element">Attribut <b>logger</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - logger : LoggerPtr</li><li>C++ : private: LoggerPtr logger</li></ul><a name="refoperation129657"></a>
+<table><tr><td><div class="element">Operation <b>Database</b></div></td></tr></table><p>*<br />                         * Construtor.<br />                         * Devolve uma instância de Database.<br />                         * @param user nome de usuário do banco de dados.<br />                         * @param password senha do banco de dados.<br />                         * @param database nome do banco de dados para conexão ou criação.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + Database(in User : char, in Password : char, in Database : char) : </li><li>C++ : public: Database(const char * User, const char * Password, const char * Database)</li></ul><a name="refoperation129785"></a>
+<table><tr><td><div class="element">Operation <b>~Database</b></div></td></tr></table><p>*<br />                         * Destrutor.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + ~Database() : </li><li>C++ : public: ~Database()</li></ul><a name="refoperation129913"></a>
+<table><tr><td><div class="element">Operation <b>createDatabase</b></div></td></tr></table><p>*<br />                         * Cria o banco de dados com o nome, usuário e senha especificados no construtor.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + createDatabase() : bool</li><li>C++ : public: bool createDatabase()</li></ul><a name="refoperation130041"></a>
+<table><tr><td><div class="element">Operation <b>deleteDatabase</b></div></td></tr></table><p>*<br />                         * Apaga o banco de dados com o nome, usuário e senha especificados no construtor.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + deleteDatabase() : bool</li><li>C++ : public: bool deleteDatabase()</li></ul><a name="refoperation130169"></a>
+<table><tr><td><div class="element">Operation <b>closeDatabase</b></div></td></tr></table><p>*<br />                         * Fecha a conexão com o banco de dados especificado no construtor.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + closeDatabase() : bool</li><li>C++ : public: bool closeDatabase()</li></ul><a name="refoperation130297"></a>
+<table><tr><td><div class="element">Operation <b>setMaxSize</b></div></td></tr></table><p>*<br />                         * Configura o tamanho máximo que o banco de dados poderá ocupar no disco.<br />                         * Deve ser acionado antes da chamada do método createDatabase().<br />                         * @param maxSize tamanho máximo (em bytes) que o banco de dados poderá ocupar no disco.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + setMaxSize(in MaxSize : long) : void</li><li>C++ : public: void setMaxSize(long MaxSize)</li></ul><a name="refoperation130425"></a>
+<table><tr><td><div class="element">Operation <b>getMaxSize</b></div></td></tr></table><p>*<br />                         * Retorna o tamanho máximo que o banco de dados pode ocupar no disco.<br />                         * @return tamanho máximo (em bytes) que o banco de dados pode ocupar no disco.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getMaxSize() : long</li><li>C++ : public: long getMaxSize()</li></ul><a name="refoperation130553"></a>
+<table><tr><td><div class="element">Operation <b>getCurrentSize</b></div></td></tr></table><p>*<br />                         * Retorna o tamanho atual do banco de dados no disco.<br />                         * @return tamanho atual (em bytes) do banco de dados no disco.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + getCurrentSize() : long</li><li>C++ : public: long getCurrentSize()</li></ul><a name="refoperation130681"></a>
+<table><tr><td><div class="element">Operation <b>query</b></div></td></tr></table><p>*<br />                         * Executa um comando SQL.<br />                         * @param sql comando SQL.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + query(in sql : char) : bool</li><li>C++ : public: bool query(const char * sql)</li></ul><a name="refoperation130809"></a>
+<table><tr><td><div class="element">Operation <b>query</b></div></td></tr></table><p>*<br />                         * Executa um comando SQL.<br />                         * @param sql comando SQL.<br />                         * @param head variável para retorno do cabeçalho da consulta SQL.<br />                         * @param data variável para retorno dos dados da consulta SQL.<br />                         * @return true, caso a operação seja executada com sucesso, ou false, caso contrário.<br />                         <br /></p><p>Declaration :</p><ul><li>Uml : + query(in sql : char, inout head : vector&lt;string&gt;, inout data : vector&lt;string&gt;) : bool</li><li>C++ : public: bool query(const char * sql, vector&lt;string&gt; * head, vector&lt;string&gt; * data)</li></ul></div>
+<p>All public operations : <a href="class128377.html#refoperation130169"><b>closeDatabase</b></a> , <a href="class128377.html#refoperation129913"><b>createDatabase</b></a> , <a href="class128377.html#refoperation130041"><b>deleteDatabase</b></a> , <a href="class128377.html#refoperation130553"><b>getCurrentSize</b></a> , <a href="class128377.html#refoperation130425"><b>getMaxSize</b></a> , <a href="class128377.html#refoperation130681"><b>query</b></a> , <a href="class128377.html#refoperation130809"><b>query</b></a> , <a href="class128377.html#refoperation130297"><b>setMaxSize</b></a> </p>
+</body>
+</html>

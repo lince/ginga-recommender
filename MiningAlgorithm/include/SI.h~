@@ -1,0 +1,38 @@
+#ifndef _IMININGALGORITHMAPRIORISI_H_
+#define _IMININGALGORITHMAPRIORISI_H_
+
+#include <vector>
+#include <string>
+#include <map>
+#include <fstream>
+
+#include <ginga/recommender/database/Database.h>
+#include <ginga/recommender/utils/Utils.h>
+#include <ginga/recommender/miningalgorithm/MiningAlgorithm.h>
+#include <ginga/recommender/miningalgorithm/Apriori_Trie.hpp>
+#include <ginga/recommender/miningalgorithm/Apriori.hpp>
+#include <ginga/recommender/miningalgorithm/common.hpp>
+#include <ginga/recommender/miningalgorithm/Input_Output_Manager.hpp>
+#include <ginga/recommender/miningalgorithm/Trie.hpp>
+
+using namespace std;
+
+namespace br {
+    namespace ufscar {
+        namespace lince {
+            namespace ginga {
+                namespace recommender {
+
+                    class si : public eit, sdt {
+                    public:
+                        si();
+
+                    };
+                }
+            }
+        }
+    }
+}
+
+#endif
+
